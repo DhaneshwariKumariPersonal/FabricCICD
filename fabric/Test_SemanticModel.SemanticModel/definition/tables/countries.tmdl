@@ -1,11 +1,11 @@
 table countries
-	lineageTag: 94c90dde-3622-435c-8a83-bd3711169d3f
+	lineageTag: 0c233b81-1ce6-4540-aba8-6926e1690383
 	sourceLineageTag: [dbo].[countries]
 
 	column _corrupt_record
 		dataType: string
 		sourceProviderType: varchar(8000)
-		lineageTag: 9834daeb-d0d7-4465-a508-c5b3fe7d0b4c
+		lineageTag: b2443008-99f6-49c3-9ec1-243c59f2a236
 		sourceLineageTag: _corrupt_record
 		summarizeBy: none
 		sourceColumn: _corrupt_record
@@ -15,7 +15,7 @@ table countries
 	column city
 		dataType: string
 		sourceProviderType: varchar(8000)
-		lineageTag: ef658bab-2691-4476-91c0-28d0e9192c0a
+		lineageTag: 07cde4a8-962b-426d-bb78-9d58ddcffaa6
 		sourceLineageTag: city
 		summarizeBy: none
 		sourceColumn: city
@@ -25,7 +25,7 @@ table countries
 	column country
 		dataType: string
 		sourceProviderType: varchar(8000)
-		lineageTag: 4d9d32bf-a130-4c2c-ad25-f461443e84fc
+		lineageTag: 5a8e31e7-5b32-489c-bd1f-092360c7f4ef
 		sourceLineageTag: country
 		summarizeBy: none
 		sourceColumn: country
@@ -35,7 +35,7 @@ table countries
 	column population
 		dataType: string
 		sourceProviderType: varchar(8000)
-		lineageTag: b3eb9b7e-7798-4e03-9ad2-9d98aee0af63
+		lineageTag: 0c4b3453-9ef8-4d4a-9653-8b2c2b6b4a75
 		sourceLineageTag: population
 		summarizeBy: none
 		sourceColumn: population

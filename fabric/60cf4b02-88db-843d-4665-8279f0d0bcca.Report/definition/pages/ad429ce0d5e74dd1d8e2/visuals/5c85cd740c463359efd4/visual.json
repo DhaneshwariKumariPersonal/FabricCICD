@@ -1,12 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
-  "name": "6baf899f8b3dfd73be24",
+  "name": "5c85cd740c463359efd4",
   "position": {
-    "x": 9.8694516971279374,
+    "x": 10.491803278688524,
     "y": 0,
     "z": 0,
-    "height": 830.443864229765,
-    "width": 834.67362924281986,
+    "height": 890.30444964871185,
+    "width": 987.72833723653389,
     "tabOrder": 0
   },
   "visual": {
@@ -99,5 +99,56 @@
       }
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "05b15d6a24d25419e86f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "countries"
+              }
+            },
+            "Property": "country"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "213ddebdc6d079bcc9f7",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "countries"
+                  }
+                },
+                "Property": "population"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "28decdff6aac6b58140d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "countries"
+              }
+            },
+            "Property": "city"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }
