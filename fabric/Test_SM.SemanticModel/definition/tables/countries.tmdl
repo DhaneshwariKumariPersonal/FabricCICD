@@ -1,0 +1,53 @@
+table countries
+	lineageTag: 94c90dde-3622-435c-8a83-bd3711169d3f
+	sourceLineageTag: [dbo].[countries]
+
+	column _corrupt_record
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 9834daeb-d0d7-4465-a508-c5b3fe7d0b4c
+		sourceLineageTag: _corrupt_record
+		summarizeBy: none
+		sourceColumn: _corrupt_record
+
+		annotation SummarizationSetBy = Automatic
+
+	column city
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ef658bab-2691-4476-91c0-28d0e9192c0a
+		sourceLineageTag: city
+		summarizeBy: none
+		sourceColumn: city
+
+		annotation SummarizationSetBy = Automatic
+
+	column country
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 4d9d32bf-a130-4c2c-ad25-f461443e84fc
+		sourceLineageTag: country
+		summarizeBy: none
+		sourceColumn: country
+
+		annotation SummarizationSetBy = Automatic
+
+	column population
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: b3eb9b7e-7798-4e03-9ad2-9d98aee0af63
+		sourceLineageTag: population
+		summarizeBy: none
+		sourceColumn: population
+
+		annotation SummarizationSetBy = Automatic
+
+	partition countries = entity
+		mode: directLake
+		source
+			entityName: countries
+			schemaName: dbo
+			expressionSource: DatabaseQuery
+
+	annotation PBI_ResultType = Table
+
