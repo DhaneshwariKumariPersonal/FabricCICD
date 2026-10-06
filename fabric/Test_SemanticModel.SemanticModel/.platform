@@ -1,11 +1,11 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
   "metadata": {
-    "type": "Report",
-    "displayName": "Test_Report"
+    "type": "SemanticModel",
+    "displayName": "Test_SemanticModel"
   },
   "config": {
     "version": "2.0",
-    "logicalId": "ae525fe8-5e77-b549-4ce7-b1b672f45517"
+    "logicalId": "0b22faf3-285f-a31d-4e6b-776d95d36c98"
   }
 }

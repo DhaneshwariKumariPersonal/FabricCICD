@@ -24,22 +24,8 @@
           }
         }
       }
-    ],
-    "outspacePane": [
-      {
-        "properties": {
-          "expanded": {
-            "expr": {
-              "Literal": {
-                "Value": "false"
-              }
-            }
-          }
-        }
-      }
     ]
   },
-  "reportSource": "QuickCreate",
   "resourcePackages": [
     {
       "name": "SharedResources",
@@ -58,7 +44,6 @@
     "exportDataMode": "AllowSummarized",
     "defaultDrillFilterOtherVisuals": true,
     "allowChangeFilterTypes": true,
-    "allowInlineExploration": true,
     "useEnhancedTooltips": true,
     "useDefaultAggregateDisplayName": true
   }
