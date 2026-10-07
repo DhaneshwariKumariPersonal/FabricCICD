@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "DataAgentNB"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "57b89c6a-54fd-a742-40ee-03ed486e1e01"
+  }
+}
