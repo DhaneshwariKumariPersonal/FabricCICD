@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
-  "name": "25198545239d9152aca3",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "2aa8e6119dca7282110b",
   "position": {
-    "x": 10.212765957446809,
-    "y": 0,
+    "x": 305.76112412177986,
+    "y": 209.83606557377047,
     "z": 0,
-    "height": 1041.7021276595744,
-    "width": 1565.4711246200607,
+    "height": 732.927400468384,
+    "width": 995.22248243559716,
     "tabOrder": 0
   },
   "visual": {
@@ -69,7 +69,7 @@
                 }
               },
               "queryRef": "CountNonNull(countries.population)",
-              "nativeQueryRef": "population"
+              "nativeQueryRef": "Count of population"
             }
           ]
         }
@@ -103,7 +103,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "e7565ad1ac63f32020d8",
+        "name": "a9cb98b242cef5287866",
         "field": {
           "Column": {
             "Expression": {
@@ -117,7 +117,7 @@
         "type": "Categorical"
       },
       {
-        "name": "b492f48dc21569bc94de",
+        "name": "8ad4a89081e679c2d4a2",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -136,7 +136,7 @@
         "type": "Advanced"
       },
       {
-        "name": "be6ef00536aa0e75550f",
+        "name": "e66c63c28cc3c167a10d",
         "field": {
           "Column": {
             "Expression": {

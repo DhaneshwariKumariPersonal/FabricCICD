@@ -2,10 +2,10 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
   "metadata": {
     "type": "SemanticModel",
-    "displayName": "Test_Sample_Finance"
+    "displayName": "Test_CountrySM"
   },
   "config": {
     "version": "2.0",
-    "logicalId": "51c7a018-42da-9336-4e65-0a9528b0ddc9"
+    "logicalId": "0235cb6f-10c8-b986-4f88-aa6e0070ba22"
   }
 }
