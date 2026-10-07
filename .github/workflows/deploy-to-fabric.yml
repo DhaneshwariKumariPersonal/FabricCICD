@@ -18,7 +18,7 @@ env:
   GITDIRECTORY: fabric
   ITEMS_IN_SCOPE: >-
     ${{ github.event.inputs.items_in_scope
-        || '[Notebook,DataPipeline,Lakehouse,SemanticModel,Report,VariableLibrary,Warehouse,CopyJob]' }}
+        || '[Notebook,DataPipeline,Lakehouse,SemanticModel,Report,VariableLibrary,Warehouse,CopyJob,DataAgent]' }}
 
 permissions:
   id-token: write
