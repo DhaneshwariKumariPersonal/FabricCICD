@@ -5,52 +5,52 @@
     "x": 10.212765957446809,
     "y": 0,
     "z": 0,
-    "height": 763.03951367781156,
-    "width": 1278.0547112462007,
+    "height": 1041.7021276595744,
+    "width": 1565.4711246200607,
     "tabOrder": 0
   },
   "visual": {
-    "visualType": "clusteredColumnChart",
+    "visualType": "treemap",
     "query": {
       "queryState": {
-        "Category": {
+        "Details": {
           "projections": [
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "financials"
+                      "Entity": "countries"
                     }
                   },
-                  "Property": "Country"
+                  "Property": "country"
                 }
               },
-              "queryRef": "financials.Country",
-              "nativeQueryRef": "Country",
+              "queryRef": "countries.country",
+              "nativeQueryRef": "country"
+            }
+          ]
+        },
+        "Group": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "countries"
+                    }
+                  },
+                  "Property": "city"
+                }
+              },
+              "queryRef": "countries.city",
+              "nativeQueryRef": "city",
               "active": true
             }
           ]
         },
-        "Series": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "financials"
-                    }
-                  },
-                  "Property": "Product"
-                }
-              },
-              "queryRef": "financials.Product",
-              "nativeQueryRef": "Product"
-            }
-          ]
-        },
-        "Y": {
+        "Values": {
           "projections": [
             {
               "field": {
@@ -59,17 +59,17 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "financials"
+                          "Entity": "countries"
                         }
                       },
-                      "Property": "Discounts"
+                      "Property": "population"
                     }
                   },
-                  "Function": 0
+                  "Function": 5
                 }
               },
-              "queryRef": "Sum(financials.Discounts)",
-              "nativeQueryRef": "Sum of Discounts"
+              "queryRef": "CountNonNull(countries.population)",
+              "nativeQueryRef": "population"
             }
           ]
         }
@@ -83,13 +83,13 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "financials"
+                        "Entity": "countries"
                       }
                     },
-                    "Property": "Discounts"
+                    "Property": "population"
                   }
                 },
-                "Function": 0
+                "Function": 5
               }
             },
             "direction": "Descending"
@@ -103,48 +103,48 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "fec349b06cbe9e3bab87",
+        "name": "e7565ad1ac63f32020d8",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "financials"
+                "Entity": "countries"
               }
             },
-            "Property": "Country"
+            "Property": "city"
           }
         },
         "type": "Categorical"
       },
       {
-        "name": "9b3910eb04a37bd3fec5",
+        "name": "b492f48dc21569bc94de",
         "field": {
           "Aggregation": {
             "Expression": {
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "financials"
+                    "Entity": "countries"
                   }
                 },
-                "Property": "Discounts"
+                "Property": "population"
               }
             },
-            "Function": 0
+            "Function": 5
           }
         },
         "type": "Advanced"
       },
       {
-        "name": "0b2c698a2525432c0ae9",
+        "name": "be6ef00536aa0e75550f",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "financials"
+                "Entity": "countries"
               }
             },
-            "Property": "Product"
+            "Property": "country"
           }
         },
         "type": "Categorical"

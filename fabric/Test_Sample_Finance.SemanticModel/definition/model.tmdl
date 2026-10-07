@@ -9,11 +9,9 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["financials"]
+annotation PBI_QueryOrder = ["countries"]
 
-ref table financials
-ref table DateTableTemplate_321be57b-aaa5-48bf-8a71-754619bed0bc
-ref table LocalDateTable_0ee516e6-dedb-4a33-8f3d-060a2c7a68b3
+ref table countries
 
 ref cultureInfo en-GB
 
