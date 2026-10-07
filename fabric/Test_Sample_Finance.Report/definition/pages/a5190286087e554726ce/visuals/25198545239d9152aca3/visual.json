@@ -23,11 +23,11 @@
                       "Entity": "countries"
                     }
                   },
-                  "Property": "country"
+                  "Property": "city"
                 }
               },
-              "queryRef": "countries.country",
-              "nativeQueryRef": "country",
+              "queryRef": "countries.city",
+              "nativeQueryRef": "city",
               "active": true
             }
           ]
@@ -42,11 +42,11 @@
                       "Entity": "countries"
                     }
                   },
-                  "Property": "city"
+                  "Property": "country"
                 }
               },
-              "queryRef": "countries.city",
-              "nativeQueryRef": "city"
+              "queryRef": "countries.country",
+              "nativeQueryRef": "country"
             }
           ]
         },
@@ -99,56 +99,5 @@
       }
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "03e15523f96bda2f5710",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "countries"
-                  }
-                },
-                "Property": "population"
-              }
-            },
-            "Function": 5
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "4ee306158780c0bad7d1",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "countries"
-              }
-            },
-            "Property": "country"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "23b17ea44ba4c8e58436",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "countries"
-              }
-            },
-            "Property": "city"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }
