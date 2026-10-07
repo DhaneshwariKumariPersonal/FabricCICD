@@ -1,9 +1,10 @@
 table countries
-	lineageTag: 2af2ff2a-234c-427d-a70d-947b32da40fe
+	lineageTag: 3607bc89-6932-4d2e-9f25-1566e0e0340d
 
 	column _corrupt_record
 		dataType: string
-		lineageTag: b945745e-9fde-4d3c-afbf-5a3d073fbf30
+		sourceProviderType: varchar(8000)
+		lineageTag: 7bfa0785-5337-409b-ad81-65eab91266a4
 		summarizeBy: none
 		sourceColumn: _corrupt_record
 
@@ -11,7 +12,8 @@ table countries
 
 	column city
 		dataType: string
-		lineageTag: 06544155-5c35-4c45-8487-b7421f1d9622
+		sourceProviderType: varchar(8000)
+		lineageTag: 35aea4ee-402a-40dd-b16d-d8cf8e4633d0
 		summarizeBy: none
 		sourceColumn: city
 
@@ -19,7 +21,8 @@ table countries
 
 	column country
 		dataType: string
-		lineageTag: 02650f36-0580-4c1d-9643-4e4b8c430e36
+		sourceProviderType: varchar(8000)
+		lineageTag: 3d019b02-e5f6-4fe8-8fcc-638622a89260
 		summarizeBy: none
 		sourceColumn: country
 
@@ -27,20 +30,23 @@ table countries
 
 	column population
 		dataType: string
-		lineageTag: 398f38c7-18ec-4c78-a3b9-4a650aa377a1
+		sourceProviderType: varchar(8000)
+		lineageTag: fb8f3617-a9fa-4d49-8005-2cebaba85fad
 		summarizeBy: none
 		sourceColumn: population
 
 		annotation SummarizationSetBy = Automatic
 
 	partition countries = m
-		mode: import
+		mode: directQuery
 		source =
 				let
 				    Source = Sql.Database("olpchl722jyehg6rfuk5r7rsnu-ll2xhm4jffbujeqjmnj6ay3klq.datawarehouse.fabric.microsoft.com", "DemoLakehouse"),
 				    dbo_countries = Source{[Schema="dbo",Item="countries"]}[Data]
 				in
 				    dbo_countries
+
+	annotation PBI_NavigationStepName = Navigation
 
 	annotation PBI_ResultType = Table
 
