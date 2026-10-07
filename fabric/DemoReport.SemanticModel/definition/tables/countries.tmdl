@@ -1,0 +1,50 @@
+table countries
+	lineageTag: 0b65c96f-e0b7-4268-afcd-7e6da6917447
+
+	column _corrupt_record
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: ed9fdf20-981e-44a9-b578-28521a5288b0
+		summarizeBy: none
+		sourceColumn: _corrupt_record
+
+		annotation SummarizationSetBy = Automatic
+
+	column city
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 84db5d9d-4787-4094-81c0-d4f4a4ff1526
+		summarizeBy: none
+		sourceColumn: city
+
+		annotation SummarizationSetBy = Automatic
+
+	column country
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: 06405eba-4f28-4f55-bcb9-5a0b01195ec3
+		summarizeBy: none
+		sourceColumn: country
+
+		annotation SummarizationSetBy = Automatic
+
+	column population
+		dataType: string
+		sourceProviderType: varchar(8000)
+		lineageTag: c7dd24ad-070c-43af-9e90-6e8c1095e848
+		summarizeBy: none
+		sourceColumn: population
+
+		annotation SummarizationSetBy = Automatic
+
+	partition countries = m
+		mode: directQuery
+		source =
+				let
+				    Source = Sql.Database("olpchl722jyehg6rfuk5r7rsnu-ll2xhm4jffbujeqjmnj6ay3klq.datawarehouse.fabric.microsoft.com", "DemoLakehouse"),
+				    dbo_countries = Source{[Schema="dbo",Item="countries"]}[Data]
+				in
+				    dbo_countries
+
+	annotation PBI_ResultType = Table
+
