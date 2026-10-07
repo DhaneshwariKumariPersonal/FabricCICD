@@ -5,3 +5,12 @@ find_replace:
       test: "$items.Lakehouse.DemoLakehouse.$sqlendpointid" # TEST Workspace DemoLakehouse Lakehouse SQL endpoint GUID
       prod: "$items.Lakehouse.DemoLakehouse.$sqlendpointid" # PROD Workspace DemoLakehouse Lakehouse SQL endpoint GUID
   is_regex: "true" # enable regex pattern matching
+
+  find_replace:
+  - find_value: \#\s*META\s+"default_lakehouse":\s*"([0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})" # Feature Workspace DemoLakehouse Lakehouse SQL endpoint GUID
+    replace_value:
+      dev: "$items.Lakehouse.DemoLakehouse.$sqlendpointid"
+      test: "$items.Lakehouse.DemoLakehouse.$sqlendpointid"
+      prod: "$items.Lakehouse.DemoLakehouse.$sqlendpointid"
+    item_type: "SemanticModel"
+    item_name: "Test_Sample_Finance"
