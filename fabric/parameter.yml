@@ -5,12 +5,3 @@ find_replace:
       test: "$items.Lakehouse.DemoLakehouse.$sqlendpointid" # TEST Workspace DemoLakehouse Lakehouse SQL endpoint GUID
       prod: "$items.Lakehouse.DemoLakehouse.$sqlendpointid" # PROD Workspace DemoLakehouse Lakehouse SQL endpoint GUID
   is_regex: "true" # enable regex pattern matching
-
-- find_value: '([a-z0-9\-]+\.datawarehouse\.fabric\.microsoft\.com)'
-  replace_value:
-      dev: "$items.Lakehouse.DemoLakehouse.$sqlendpointid" # DEV Workspace DemoLakehouse Lakehouse SQL endpoint GUID
-      test: "$items.Lakehouse.DemoLakehouse.$sqlendpointid" # TEST Workspace DemoLakehouse Lakehouse SQL endpoint GUID
-      prod: "$items.Lakehouse.DemoLakehouse.$sqlendpointid" # PROD Workspace DemoLakehouse Lakehouse SQL endpoint GUID
-  item_type: "SemanticModel"
-  item_name: "Test_Sample_Finance"
-  is_regex: "true" # enable regex pattern matching
