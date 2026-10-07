@@ -33,6 +33,45 @@
         "name": "RunIngestionNotebook",
         "description": "TestDemo",
         "dependsOn": []
+      },
+      {
+        "type": "TridentNotebook",
+        "typeProperties": {
+          "notebookId": "57b89c6a-54fd-a742-40ee-03ed486e1e01",
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "parameters": {
+            "TargetLakehouseId": {
+              "value": {
+                "value": "@pipeline().libraryVariables.Demo_VL_Parameter_LakehouseID",
+                "type": "Expression"
+              },
+              "type": "string"
+            },
+            "TargetWorkspaceId": {
+              "value": {
+                "value": "@pipeline().libraryVariables.Demo_VL_Parameter_WorkspaceID",
+                "type": "Expression"
+              },
+              "type": "string"
+            }
+          }
+        },
+        "policy": {
+          "timeout": "0.12:00:00",
+          "retry": 0,
+          "retryIntervalInSeconds": 30,
+          "secureInput": false,
+          "secureOutput": false
+        },
+        "name": "DataAgentDataset",
+        "dependsOn": [
+          {
+            "activity": "RunIngestionNotebook",
+            "dependencyConditions": [
+              "Succeeded"
+            ]
+          }
+        ]
       }
     ],
     "libraryVariables": {
