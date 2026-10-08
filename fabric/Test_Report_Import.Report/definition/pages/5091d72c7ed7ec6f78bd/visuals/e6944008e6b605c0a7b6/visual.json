@@ -10,7 +10,7 @@
     "tabOrder": 0
   },
   "visual": {
-    "visualType": "pieChart",
+    "visualType": "lineStackedColumnComboChart",
     "query": {
       "queryState": {
         "Category": {
@@ -103,7 +103,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "a2a1e6ac9cbbc8916645",
+        "name": "ca141f17969caa5bafe6",
         "field": {
           "Column": {
             "Expression": {
@@ -117,7 +117,7 @@
         "type": "Categorical"
       },
       {
-        "name": "44facb2e7afb0eb32b8d",
+        "name": "4513109f59d3e46727af",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -136,7 +136,7 @@
         "type": "Advanced"
       },
       {
-        "name": "210086112812744a1f0d",
+        "name": "c67ddbf3e831a221da7a",
         "field": {
           "Column": {
             "Expression": {
