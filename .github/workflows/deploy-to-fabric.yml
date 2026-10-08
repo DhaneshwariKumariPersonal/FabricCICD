@@ -12,13 +12,13 @@ on:
       items_in_scope:
         description: 'Fabric items to deploy'
         required: true
-        default: '[Notebook,DataPipeline,Lakehouse,SemanticModel,Report,VariableLibrary,Warehouse,CopyJob]'
+        default: '[Notebook,DataPipeline,Lakehouse,SemanticModel,Report,VariableLibrary,Warehouse,CopyJob,DataAgent]'
 
 env:
   GITDIRECTORY: fabric
   ITEMS_IN_SCOPE: >-
     ${{ github.event.inputs.items_in_scope
-        || '[Notebook,DataPipeline,Lakehouse,SemanticModel,Report,VariableLibrary,Warehouse,CopyJob]' }}
+        || '[Notebook,DataPipeline,Lakehouse,SemanticModel,Report,VariableLibrary,Warehouse,CopyJob,DataAgent]' }}
 
 permissions:
   id-token: write
